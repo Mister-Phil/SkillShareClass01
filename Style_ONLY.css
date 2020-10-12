@@ -1,0 +1,12 @@
+body {background-color: rgb(211, 194, 41);}
+
+<style>
+    h1{font-size: 10px; color: salmon;}
+    h2{font-size: 20px; color: hotpink;}
+    h2{font-size: 20px; color: rgb(255, 208, 0);}
+    .big {font-size: 60px;}
+    .upper {text-transform: uppercase;}
+    .big.upper{color: black;}
+    h1 span{font-size: 80px; color: fuchsia;}
+
+</style>

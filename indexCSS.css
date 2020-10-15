@@ -1,8 +1,33 @@
-body {margin: 0;}
+body {margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
 
 header {background-color: rgb(11, 184, 11);
 text-align: center;
+padding-top: 50px; padding-bottom: 50px;
+ }
+h1 {color: cornsilk;
+font-size: 50px;
 }
-h1 {color: cornsilk;}
 
-header img {border-radius: 150px; width: 300px;}
+/* Here, for the border, you need to put ALL the caracteristics into the same lign!*/
+header img {border-radius: 150px; width: 300px; border:20px solid black;}
+
+main {
+    max-width: 800px;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 40px; 
+}
+
+h2 {font-size: 35px; color: rgb(0, 255, 21);}
+a {color: rgba(83, 139, 0, 0.719);}
+a:hover {color: rgb(0, 255, 213); background-color: black;}
+
+footer {background-color: rgb(11, 184, 11);
+    text-align: center;}
+footer a:hover {background-color: black;}
+p.cap {margin-top: 15px; font-size: 30px;}

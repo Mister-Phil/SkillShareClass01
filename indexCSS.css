@@ -27,7 +27,12 @@ h2 {font-size: 35px; color: rgb(0, 255, 21);}
 a {color: rgba(83, 139, 0, 0.719);}
 a:hover {color: rgb(0, 255, 213); background-color: black;}
 
+/* Even tho the {} could apply to the entire footer, it's better to SEPARATE them,
+make a new line for EVERY new specific thing you want when it comes to CSS.
+**In case of HTML, you can mix/include many into the same {}! 
+As you see, each line for the FOOTER is specific to one detail, on mess them together!!*/
 footer {background-color: rgb(11, 184, 11);
     text-align: center;}
 footer a:hover {background-color: black;}
+footer a:link {color: white;}
 p.cap {margin-top: 15px; font-size: 30px;}

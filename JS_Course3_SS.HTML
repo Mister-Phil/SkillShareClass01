@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><title>JS Exploration!</title></head>
+
+<header></header>
+
+<body>
+    
+<H4 id="sentence">
+This is a kind message to remind to Mister Bond <br>
+to clean up the room after hee made some business...    
+</H4>   
+
+<script>
+
+var sentenceNode = document.getElementById("sentence");
+var sentence = sentenceNode.innerText
+
+console.log("Sentence:", sentence)
+var first11 = sentence.substr(1,13);
+
+var allwords = sentence.split(" ")
+var bWords = "(" + allwords.join(")(") + ")"
+allwords.slice(0,5)
+
+//var1 = "30 3 X 20 III V12 ";
+//var2 = 50;
+//alert(var1);
+//alert(var2);
+
+</script>
+<!--
+
+(This is NO SCRIPT) Hi, I am <Span id="Agent">Agent007 (now played as Daniel)</Span>
+
+
+var Agent = document.getElementById("Agent");
+var Agent007 = Agent.innerHTML;
+Bond = Agent007 + " Yes...THE 007 Bond agent... ";
+Agent.innerHTML = Bond;
+-------------------
+<h1 id='test00'>Hello Everyone!</h1>
+//Dans le 'script'    
+var testT1 = document.getElementById('test00');
+var oriTEXT = testT1.innerHTML
+//Here the last command overwrites the first one.
+testT1.innerHTML='<u>Hello</u> New Text!';
+
+varA = " I will impact ";
+varB = 50;
+varC = " billions lives with my ideas! ";
+var sentence = varA + varB + varC;
+alert(sentence)
+-------------------
+var car = 'Bugatti'
+var model = 'Veron'
+console.log(car, model);
+-->
+</body>
+</html>

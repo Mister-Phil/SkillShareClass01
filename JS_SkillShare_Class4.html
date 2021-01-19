@@ -1,0 +1,166 @@
+<html>
+
+<head><title>Let's play with Java!</title></head>
+
+<body>
+ <!--No comment...-->
+
+ <!--
+    <input id="input" type="text" size="50" value="Click Here" onfocus="value='Press here plz';"
+    onblur="this.value='Can you click?';"/>
+    
+    <br/><br/>
+    
+    <a href="#" onfocus="document.getElementById('input').value = 'You are now focused';">
+    This is the link </a>    
+
+    **This text goes with #9
+<a href="#" id="link">Click Yio!</a>
+-->
+
+<p id="elementID"></p>
+
+<div>
+    parent
+    <div id="child1">Child #1</div>
+    <div id="child2">Child #2</div>
+</div>
+
+</body>
+
+<!--Yes your JS happens here!-->
+<script>  
+
+var parent = document.querySelector('#parent');
+var elementID = document.querySelector('#elementID');
+
+parent.addEventListener('mouseover', function(EE) {
+    elementID= 'The triggered element has an ID of '});
+//THIS = EE target.elementID = is an error source!
+</script>
+
+<!-- THE ORIGINAL JS plain text WITH ALL functions...: 
+//**This function is REALLY INTERESTING! But I don't know the syntaxc with it.
+ <InputDeviceInfo> (or 'InputDeviceInfo') 
+
+//#9 How to display JS sript from 'HTML a href' link
+
+var element = document.querySelector('#link');
+
+element.addEventListener('click', function() {
+alert("You clicked the link");
+});
+
+element.addEventListener('click', function() {
+alert("Hello I am lost");
+});
+
+//#8 How to display a specofic element in a 'category'    
+var vehicule = {
+    WhatModel: function () {
+        return "The model is " + carModel;}};
+    
+var car1 = Object.create(vehicule); 
+carName = "Rolls Royce"; 
+carModel = "Phantom";
+alert (car1.WhatModel());       
+
+var car2 = Object.create(vehicule); 
+car2Name = "Ferrari"; 
+car2Model = "F40";
+  
+
+var car3 = Object.create(vehicule); 
+car1Name = "Lamborghini"; 
+car1Model = "Diablo";
+
+//#7 how to search text in a string.   
+var context = " Hello, are you looking for a new car?"; 
+
+var SearchFor = /car/;
+
+var result = context.match(SearchFor);
+
+alert(result);    
+
+//#6**Here we have one function into another, working together as final result.
+function WWinned() {
+var WinnerID = "Mohammed Ali"; 
+    function SayWinnerID(){
+    var CallWinner = "The winner is " + WinnerID;
+    alert(CallWinner);
+    }
+return SayWinnerID;}
+
+var BigWinner = WWinned(); BigWinner();
+
+
+//#5**Here you need to call x2 the function    
+function WWinned() {
+alert("The winner is"); 
+    function WinnerID(){
+    alert("Mohammed Ali");
+    }
+return WinnerID;}
+
+var BigWinner = WWinned(); BigWinner();     
+
+
+var text = "Hi there"; 
+
+function sayHi() {
+    alert(text);
+    var text = "I need to go!";
+    alert(text);}
+
+    sayHi();
+
+    
+    
+//#4. Fundtion for testing 'let'    
+var number = 10;
+
+function Behavior() {
+
+    if (true){
+    //here the 'let' allow to display a different value.
+    let number = 40;
+    alert(number);}
+
+alert(number); }
+
+Behavior(); 
+
+
+
+    //#3. If Statement FUNCTION 
+    var number = 20;
+
+function GiveN() {
+    return number;
+}
+    //#2. If Statement FUNCTION
+    var gains = 1000;
+
+    function CashFLow(profit) {
+        if (profit > gains) {
+            alert("Profitable!"); 
+    }
+    else {alert("Make the adjustments")}
+}
+
+CashFLow(1200);
+
+    //1. How to see the result??
+    //2. You need to erase the upper function to make the code below work.
+    //3. The 2 codes will run here...
+   
+    //#1 TRUE/FALSE FUNCTION
+    var sale = 1; 
+    if(sale){
+        alert("Great!");}
+    else{alert("You can do it!")}
+
+-->
+
+</html>

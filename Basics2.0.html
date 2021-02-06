@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html:5>
 
-<head><title>Just another page</title></head>
+<head>
+    <title>Just another page</title>
+    
+</head>
 
 <style>
     .block0{background-color: red; text: white; padding: 50px;}
     .block1{background-color: white; text: black; padding: 50px;}
     .block2{background-color: green; text: white; padding: 50px;}
+/*Here you NEED to have: (1) the #, (2) solid, (3) the px IN FRONT of solid...*/
+    #lorem1{border: 15px solid red;}
 </style>
 
 <h1>Welcome to Roja Italia...</h1> <br>
 
 <body>
+<h3 id="UP">Click <a href="#Down">here</a> to go down the page</h3>   
 <!--The order doesn't mean nothing here...-->
 <div class="block0">
 <p>You should be able <b><u><i>to read this.</u></b></i></p>
@@ -38,7 +44,68 @@
 <div class="block2">
     <p>This is the last block...</p>
 </div>
+
+<div>
+    <p>
+        This is another text - for another SkillShare class. <br>
+        <!--SPAN = inline container // L'élément HTML <span> est un conteneur générique en ligne (inline) pour les contenus phrasés.-->
+        In brief <span style="text-decoration: underline; color: red;">this</span> should be underligned & red... <br>
+        
+    </p>
+</div><br>
+<!--Here by default of putting only the 'width', the 'heigth' will adjust in proportion automatically.-->
+<img src="https://img.freepik.com/free-vector/waving-italian-flag-flag-italy_175392-29.jpg?size=626&ext=jpg" alt="Italy" width="20%">
+
+<br>
+<h4>Similar European countries table</h4>
+<!--
+    1.The header (th) needs to be 'colspan' x the number of cells in a row...
+    2. You can apply 'colspan' & 'rowspan' to inner table elements...
+    3. Adding a 'border' and the 'width' are for estetichs. **Yes you rather % as 'wight/heigth' for responsive...
+-->
+<table border="1" width="50%">
+    <tr><th colspan="4">Countries to visit</th></tr>
+    <tr>
+        <td colspan="2">France</td>
+        <td rowspan="2">Spain</td>
+        <td>Polonia</td>
+    </tr>
+
+    <tr>
+        <td>Germany</td>
+        <td>Sweden</td>
+        <td>Romania</td>
+    </tr>
+</table><br>
+
+<div id="lorem1">
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed laudantium modi perspiciatis inventore hic possimus expedita ullam, accusamus ipsa quidem labore itaque consequatur vel sapiente similique doloribus. A, qui totam!
+</div><br>
+
+<pre>
+    Hello 
+    &lt;b&gt;Yio...&lt;/b&gt; <!--This is an entity-->
+</pre>
+
+<h4>This is a form</h4>
+
+<div><form action="" method="POST">
+    <input required type="email" placeholder="Your destination"><br>
+    <textarea required name="" id="" cols="10" rows="5" placeholder="Please tell us about your trip"></textarea><br>
+    <button>Submit</button>
+</form></div><br>
+
+<div><select required name="Your Fav meal?">
+    <option value="value1">Pizza</option>
+    <option value="value2">Pasta</option>
+    <option value="value3">Bread & Nutella</option>
+</select></div><br>
+
+<span id="Down"></span>Click <a href="#UP">here</a> to go on up the page...
+<br>Thank you for visiting us!!!</span>
+<br>
+
 </body>
 
-<footer></footer>
+<footer>&copy; 2021</footer>
 </html:5>

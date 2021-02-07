@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS code page</title>
+</head>
+
+<!--You can use style for CSS:
+1. All 'proprety: value;' are declatrations.
+2. Then you have 'selector' = the fact to select spec elements.
+3. If you want to act on elements like 'H1' or 'H2' you DON'T need a document.
+4. You can apply MANY stlye classes to many elements: using the classes OR ',' in <style>.
+5. The syntax in style (i.e. classes) are case sensitive. You can add a '.' to link a class too...
+6. You can use the ID in the text element attribute, but you need to use '#' in the style...
+7. For colours, you can use the '#'.**Also you have 3 types (name, 'rgb()/rgba()')
+8. You can change the colours of the links (from unused to visited).
+9. For sizes, you have 'px', 'em' & 'rem' too... *PX are the most used.
+10. When adding an image in background, you can use 'background-size: contain (repeat image in element)/cover(the entire place)'.
+11. To center text you can use <center> in body...
+-->
+<style>
+    .core{background-color: black; color: rgb(231, 231, 231);}
+    
+    .block1{background-image: url("https://www.007fragrances.com/wp-content/uploads/2017/01/007_men_hero.jpg");
+    background-size: cover; background-position: center center; background-repeat: no-repeat;
+    height: 25%;
+    border: 5px dashed white; /*There is more than 1 way to make the border...*/
+    border-radius: ; /*Will round the corner... BUT can be used to make art (i.e. 'border-top-left-radius', etc...)*/
+    }
+    .block2{display: inline-block;
+    }
+    .action{color: gold;}
+    .love{color: red;}
+    
+    /*
+    h1{color: gold;}
+    h2{color: red; font-size: 40px;}
+    .color{color: green;}
+    .under{font-size: 25px;}
+    h5, h6{color: purple;}
+    p strong{color: cyan;}
+    a{color: red;}
+    a:hover{color: yellow;}
+    a:active{color: white;}
+    a:visited{color: cyan;}
+    p.exception{color: magenta}
+    */
+</style>
+
+<body class="core">
+<div class="block1">    
+    <h1>Meet...</h1><br>
+    <h2>Mister Bond</h2>
+</div>
+<div>
+    <h4 class="color"><center>Who is James Bond?</center></h4>
+</div>
+
+<div class="block2 action" >Man of action</div> <!--https://i.pinimg.com/originals/84/7d/e2/847de25490709b72d4e5cbfd22f9d9a7.jpg-->
+<div class="block2 love">A deep lover?</div><!--https://i.pinimg.com/originals/44/90/7c/44907cc1f76acd97ddf0bc68603a3627.jpg-->
+
+    <h5 class="under">Hey, this is Bobby</h5>
+    <h6>And here is Bobby's twin: Bob</h6><br>
+
+    <p>Please click <a href="https://google.com">here</a> to go somewhere else...</p>
+    <p class="exception">This is a spy element...</p>
+
+</body>
+</html>

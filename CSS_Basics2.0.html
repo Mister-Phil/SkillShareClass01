@@ -19,20 +19,43 @@
 9. For sizes, you have 'px', 'em' & 'rem' too... *PX are the most used.
 10. When adding an image in background, you can use 'background-size: contain (repeat image in element)/cover(the entire place)'.
 11. To center text you can use <center> in body...
+12. The class names need to start by a letter...
+13. 
 -->
 <style>
-    .core{background-color: black; color: rgb(231, 231, 231);}
+    .core{background-color: black; color: rgb(231, 231, 231); padding: 2.5%;}
     
     .block1{background-image: url("https://www.007fragrances.com/wp-content/uploads/2017/01/007_men_hero.jpg");
     background-size: cover; background-position: center center; background-repeat: no-repeat;
-    height: 25%;
+    height: 250px;
     border: 5px dashed white; /*There is more than 1 way to make the border...*/
     border-radius: ; /*Will round the corner... BUT can be used to make art (i.e. 'border-top-left-radius', etc...)*/
     }
-    .block2{display: inline-block;
-    }
-    .action{color: gold;}
-    .love{color: red;}
+    .block2{
+        display: inline-block;
+        border: 1px solid red;
+        width: 45%; height: 500px; /*Here those 2 will only work with 'inline' & 'block' */
+        margin: 2%;
+        text-align: right;
+        font-family: Georgia, 'Times New Roman', Times, serif;}
+    /*div.2in1{display: inline-block;
+    }*/
+    .action{color: white;
+        background-image: url("https://i.pinimg.com/originals/84/7d/e2/847de25490709b72d4e5cbfd22f9d9a7.jpg");
+        background-size: ;
+        background-position: center center;
+        background-repeat: no-repeat;}
+    .love{color: white;
+        background-image: url("https://i.pinimg.com/originals/44/90/7c/44907cc1f76acd97ddf0bc68603a3627.jpg");
+        background-size: ;
+        background-position: center center; 
+        background-repeat: no-repeat;}
+
+        #circles{ /*Take out the 's' to make it work*/
+            width: 100px; height: 100px;
+            border: 1px dashed white;
+            border-radius: 50%;
+        }
     
     /*
     h1{color: gold;}
@@ -53,13 +76,25 @@
 <div class="block1">    
     <h1>Meet...</h1><br>
     <h2>Mister Bond</h2>
-</div>
+</div><br>
 <div>
-    <h4 class="color"><center>Who is James Bond?</center></h4>
+    <h4 class="Intro2"><center>Who is James Bond?</center></h4>
+</div><br>
+
+<div class="2in1">
+    <span class="block2 action" >Man of action</span> <!---->
+    <span class="block2 love">A deep lover?</span><!---->
+</div><br>
+
+<div>
+    <p><strong>His background: </strong>Ian Fleming created the fictional character of James Bond as the central figure for his works. Bond is an intelligence officer in the Secret Intelligence Service, commonly known as MI6. Bond is known by his code number, 007, and was a Royal Naval Reserve Commander.</p>
 </div>
 
-<div class="block2 action" >Man of action</div> <!--https://i.pinimg.com/originals/84/7d/e2/847de25490709b72d4e5cbfd22f9d9a7.jpg-->
-<div class="block2 love">A deep lover?</div><!--https://i.pinimg.com/originals/44/90/7c/44907cc1f76acd97ddf0bc68603a3627.jpg-->
+<div class="bcirlces">
+    <div id="circle"></div>
+    <div id="circle"></div>
+    <div id="circle"></div>
+</div>
 
     <h5 class="under">Hey, this is Bobby</h5>
     <h6>And here is Bobby's twin: Bob</h6><br>

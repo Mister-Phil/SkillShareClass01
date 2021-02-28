@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS code page</title>
+    <title>CSS code page 1.0</title>
 </head>
 
 <!--You can use style for CSS:
@@ -20,43 +20,64 @@
 10. When adding an image in background, you can use 'background-size: contain (repeat image in element)/cover(the entire place)'.
 11. To center text you can use <center> in body...
 12. The class names need to start by a letter...
-13. 
+13. Inline-block will also work for 2+ blocks (i.e. div...)
+14. Max-wdth = from 0 - 500px. **Yes the marging will put space between INLINE elements.
+15. **(GOOGLE) Basically, a margin is the space around an element and padding refers to the space between an element and the content inside it. The margin falls outside two adjacent elements. ... In creating the gap, the margin pushes adjacent elements away. On the other hand, padding is placed inside the border of an element.
+16. 
+**(GOOGLE) The resolution depends on CSS pixel ratio.
+If cases pixel ratio increases the resolution of the device can be increased, 
+but remember viewport of size, which is the actual visible size of the screen will not change. 
+The maximum resolution of a screen is actually a multiplier of CSS pixel ratio.
+
 -->
+
 <style>
     .core{background-color: black; color: rgb(231, 231, 231); padding: 2.5%;}
     
     .block1{background-image: url("https://www.007fragrances.com/wp-content/uploads/2017/01/007_men_hero.jpg");
     background-size: cover; background-position: center center; background-repeat: no-repeat;
-    height: 250px;
+    height: 25vw;
     border: 5px dashed white; /*There is more than 1 way to make the border...*/
     border-radius: ; /*Will round the corner... BUT can be used to make art (i.e. 'border-top-left-radius', etc...)*/
     }
     .block2{
         display: inline-block;
         border: 1px solid red;
-        width: 45%; height: 500px; /*Here those 2 will only work with 'inline' & 'block' */
+        width: 45%; height: 50vw; /*Here those 2 will only work with 'inline' & 'block' */
+        background-size: cover; /*Here this feature is MORE efficient then " object-fit: ; "... */
         margin: 2%;
+        background-position: center center;
+        background-repeat: no-repeat;
         text-align: right;
         font-family: Georgia, 'Times New Roman', Times, serif;}
-    /*div.2in1{display: inline-block;
+    /*div.2in1{display: inline-block; --- TO IGNORE!! 
     }*/
     .action{color: white;
-        background-image: url("https://i.pinimg.com/originals/84/7d/e2/847de25490709b72d4e5cbfd22f9d9a7.jpg");
-        background-size: ;
-        background-position: center center;
-        background-repeat: no-repeat;}
-    .love{color: white;
-        background-image: url("https://i.pinimg.com/originals/44/90/7c/44907cc1f76acd97ddf0bc68603a3627.jpg");
-        background-size: ;
-        background-position: center center; 
-        background-repeat: no-repeat;}
-
-        #circles{ /*Take out the 's' to make it work*/
-            width: 100px; height: 100px;
-            border: 1px dashed white;
-            border-radius: 50%;
+        background-image: url("https://pyxis.nymag.com/v1/imgs/949/b6c/f0aa0346a0b0aeda3a8451644c42cb582e-no-time-to-die.rsquare.w1200.jpg");
         }
-    
+    .love{color: white;
+        background-image: url("https://i.pinimg.com/originals/3f/64/a0/3f64a0b89767323ace4fe206510ca99e.jpg"); 
+        }
+
+        #circle{ /*Take out the 's' to make it work*/
+            width: 20vw; height: 20vw;
+            border: 5px dashed black;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 2.5%; /*Space between elements...*/
+        }
+        #bcirlces{
+            height: 25vw;
+            background-color: white;
+            color: black;
+            text-align: top;
+            padding: 5%;
+            /*Here adding a MARGIN will add the request to the existing 5%...*/
+            background-image: url(https://cdn.asiatatler.com/asiatatler/i/hk/2020/08/18103527-aston-martin-unveils-new-limited-edition-bond-inspired-sports-cars_cover_2000x1333.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        #head_Text{text-align: center;}
     /*
     h1{color: gold;}
     h2{color: red; font-size: 40px;}
@@ -72,9 +93,11 @@
     */
 </style>
 
+<!--<link rel="stylesheet" href="css2.css">
+If you want to link the CSS style-sheet.-->
 <body class="core">
 <div class="block1">    
-    <h1>Meet...</h1><br>
+    <h1>Meet...</h1>
     <h2>Mister Bond</h2>
 </div><br>
 <div>
@@ -82,22 +105,24 @@
 </div><br>
 
 <div class="2in1">
-    <span class="block2 action" >Man of action</span> <!---->
+    <span class="block2 action" >A man of action</span> <!---->
     <span class="block2 love">A deep lover?</span><!---->
 </div><br>
 
 <div>
-    <p><strong>His background: </strong>Ian Fleming created the fictional character of James Bond as the central figure for his works. Bond is an intelligence officer in the Secret Intelligence Service, commonly known as MI6. Bond is known by his code number, 007, and was a Royal Naval Reserve Commander.</p>
+    <p><strong>Context: </strong>James Bond is a British literary and film character. He is often depicted as a peerless spy, notorious womanizer, and masculine icon. He is also designated as agent 007 (always articulated as “double-oh-seven”) in the British Secret Intelligence Service, or MI6.</p>
+    <br><h3 id="head_Text">What else can describe James?</h3>
 </div>
 
-<div class="bcirlces">
+<div id="bcirlces">
     <div id="circle"></div>
     <div id="circle"></div>
     <div id="circle"></div>
 </div>
 
-    <h5 class="under">Hey, this is Bobby</h5>
-    <h6>And here is Bobby's twin: Bob</h6><br>
+<div>
+    <p>Othewise, James is a great agent known for many aspects.</p>
+</div>
 
     <p>Please click <a href="https://google.com">here</a> to go somewhere else...</p>
     <p class="exception">This is a spy element...</p>

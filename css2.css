@@ -1,0 +1,42 @@
+.core{background-color: black; color: rgb(231, 231, 231); padding: 2.5%;}
+    
+.block1{background-image: url("https://www.007fragrances.com/wp-content/uploads/2017/01/007_men_hero.jpg");
+background-size: cover; background-position: center center; background-repeat: no-repeat;
+height: 25vw;
+border: 5px dashed white; /*There is more than 1 way to make the border...*/
+border-radius: ; /*Will round the corner... BUT can be used to make art (i.e. 'border-top-left-radius', etc...)*/
+}
+.block2{
+    display: inline-block;
+    border: 1px solid red;
+    width: 45%; height: 50vw; /*Here those 2 will only work with 'inline' & 'block' */
+    background-size: cover; /*Here this feature is MORE efficient then " object-fit: ; "... */
+    margin: 2%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align: right;
+    font-family: Georgia, 'Times New Roman', Times, serif;}
+/*div.2in1{display: inline-block; --- TO IGNORE!! 
+}*/
+.action{color: white;
+    background-image: url("https://pyxis.nymag.com/v1/imgs/949/b6c/f0aa0346a0b0aeda3a8451644c42cb582e-no-time-to-die.rsquare.w1200.jpg");
+    }
+.love{color: white;
+    background-image: url("https://i.pinimg.com/originals/3f/64/a0/3f64a0b89767323ace4fe206510ca99e.jpg"); 
+    }
+
+    #circle{ /*Take out the 's' to make it work*/
+        width: 20vw; height: 20vw;
+        border: 5px dashed black;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 2.5%; /*Space between elements...*/
+    }
+    #bcirlces{
+        height: 25vw;
+        background-color: white;
+        color: black;
+        text-align: top;
+        padding: 5%;
+        /*Here adding a MARGIN will add the request to the existing 5%...*/
+    }

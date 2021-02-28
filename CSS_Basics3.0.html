@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201</title>
+</head>
+
+<!--
+  1. Their is a difference between box-sizing: "content-box; " & " border-box;" b/c the last one fit ALL content in the box. 
+  2. Outlines = border around a border... // It can help to vizualize better elements.  
+  3. In the padding (and other measures), their is a difference between px & pc.
+  4. Inline blocks have a space on top of them... ; not "inline" elements.
+  
+  5. For "stick element", you need 'position: sticky;' and 'Top: 0'. **BUT will work with AND without 'px'.
+  (26-02-2021) and + LOOK THE 3.2 DOC
+  6. You can center an element with: "margin-left: auto;" & "margin-right: auto;" OR " margin: 200px auto; ".
+  7. Here you need: (1) a dimension for the object, (2) More text then it can take, and auto value. The default = 'visible' ; 'hidden' will CUT the text. 
+  8. Those next elements are for specificity: "#parent > .box5" "#parent .box5 + .box5{}" & "#parent .box5 ~ .box5{}". 
+  8.2 (GOOGLE - SPECIFICITY): Specificity is a weight that is applied to a given CSS declaration, determined by the number of each selector type in the matching selector. ... As per CSS rules, directly targeted elements will always take precedence over rules which an element inherits from its ancestor.à
+  9. Pseudo selector/class: ":hover" = when mouse passes over ; ":not" **nth-child() = expception. *Their relative positions matter!* 
+  10. Before & after pseudo elemnts 
+  11. Animations = for moving things in a smooth way.
+  12. (Dev.mozilla): CSS animations make it possible to animate transitions from one CSS style configuration to another. Animations consist of two components, a style describing the CSS animation and a set of keyframes that indicate the start and end states of the animation's style, as well as possible intermediate waypoints
+  13. See your final project = replicate another website; you could + pratice via WP on your own...
+-->
+<style>
+/*Last updates = 25-02-2021*/
+/*body{margin: 0; padding: 0; height: 3000px;}*/
+
+box0 {position: sticky; /*Important element!*/
+background-color: blue;
+border-bottom: green;
+padding: 20px; 
+top: 0px; /*Top element for sticky element, BUT will work with AND without a px*/
+}
+
+box {
+  border: 5px solid red;
+  height: 300px;
+  width: 300px; 
+  box-sizing: content-box; /*This provide a different result than "content-"*/
+  outline: 5px solid black;
+  outline-offset: 10px; /*This will add a space between the border and the outline.*/
+  overflow: auto; 
+  }
+
+box2{
+  color: rgb(0, 255, 0);
+  background-color: black;
+  border: 2px solid rgb(0, 255, 0);
+  width: 50%; height: 50%;
+  position: absolute; bottom: 0; left: 0;
+  /* this = "x y blur color" values*/
+  /* This setting is "color: rgba(red, green, blue, alpha)" */}
+
+box3{border: 4px dashed blue;
+position: absolute; bottom: 0; right: 0;
+}
+
+box4{border: 5px solid red;
+width: 400px; height: 400px;
+/*margin-left: auto; margin-right: auto;*/
+margin: 200px auto;
+}
+
+parent > box5{border: 5px solid red;
+width: ; height: 20px;
+/*margin-left: auto; margin-right: auto;*/}
+
+parent box5 + box5 {background-color: blue;}
+parent box5 ~ box5 {background-color: black;}
+
+.box6{border: 5px solid black; height: 20px;}
+.box6:not(.dont) {background-color: rgb(255, 124, 146);} /*For the exceptions too*/ 
+.box6:hover {background-color: greenyellow;} /*Mouse effect*/
+.box6:nth-child(4) {background-color: rgb(255, 208, 0);} /*Good to select one element w/o touching to the HTML.*/
+
+.box7{border: 5px solid black; 
+height: 300px; width: 300px;
+margin: 50px auto;
+position: relative;
+background-color: black;}
+
+.box7::before{content: ' ';
+display: block; 
+border: 5px solid red; /*Here the borders will overlap, so you need to move the box more (i.e. top left)*/
+width: 100%; height: 100%;
+position: absolute; 
+top: -20px; left: -20px;
+z-index: -1; /*Will move the element before in backgroud*/
+}
+
+.box7::after{content: ' '; /*Here it's says their is a space*/
+display: block; 
+border: 5px solid green; /*Here the borders will overlap, so you need to move the box more (i.e. top left)*/
+width: 100%; height: 100%;
+position: absolute; 
+top: 10px; right: -20px; /*If you want the same effect with another property, take in consideration the margin.*/
+z-index: 2; /*Will move the element before in backgroud*/
+}
+
+a{text-decoration: none;
+color: black;
+position: relative;
+}
+
+a::before{content:'';
+width: 100%;
+height: 4px;
+background-color: red;
+position: absolute;
+bottom: 0; left: 0;
+z-index: -1;
+}
+
+a:hover::before{height: 14px;} /*Another way to display the hover. BUT "hover" takes 1 ":" ; before takes 2. */
+
+p::first-letter{font-size: 50px;
+float: left;
+margin: 5px;}
+
+p::first-line{font-weight: bold;} /*Only the words in the first live (linked to the viewwidth) will be touched.*/
+::selection{background-color: gold; color: rgb(255, 20, 20);} /*Here good when you select.*/
+
+a{background-color: white;
+display: inline-block;
+padding:  5px 15px;
+color: red;
+text-decoration: none;
+border: 1px solid black;
+font-size: 40px;
+transition: background-color 2s, color 1s, /*Here you need a "," to apply transition on many declaration!*/
+padding 1s;
+}
+
+/*a:hover{background-color: black; color: gold; padding: 5% 10%;} /*We can apply many effects on the hover*/
+
+gradient{background-image: linear-gradient(to right, black, yellow); /*But ccsgradient.io IS A GREAT tool, you'll get the CSS too. You can use it for the body OR a div, etc.*/
+height: 300px; width: 100%;} 
+
+.box8{border: 10px solid black;
+width: 300px; height: 300px;
+margin: 50px auto;
+
+transform: /*translate(100px, 100px); = move it
+            rotate(45deg); = rotate NO-dynamically.
+            scale(0.2); = change size:*/
+            skew(20deg, 20deg); = for a 3D effect (applicable for X & Y axis).
+}
+
+</style>
+
+<body>
+<!--    
+    <div>Outline #1</div>
+    <div>Outline #2</div>
+    <div>Outline #3</div>
+
+
+<div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  <div class="box3">I am a the key...</div>
+  <div class="box2">For this door...</div>
+</div>
+
+<div style="background-color: red; color: greenyellow;">
+  <div class="box0">Section 1.0</div>
+
+  <p>Lorem ipsum dolor sit amet consectetur, 
+  adipisicing elit. Voluptatibus eum dolor unde quidem quo atque dolorem dolorum? Nostrum, 
+  nobis. Perferendis officia temporibus quia ducimus magnam omnis praesentium ratione, illo vitae.</p>
+  <br>
+  <p>Lorem ipsum dolor sit amet consectetur, 
+  adipisicing elit. Voluptatibus eum dolor unde quidem quo atque dolorem dolorum? Nostrum, 
+  nobis. Perferendis officia temporibus quia ducimus magnam omnis praesentium ratione, illo vitae.</p>
+  <br>
+  <p>Lorem ipsum dolor sit amet consectetur, 
+  adipisicing elit. Voluptatibus eum dolor unde quidem quo atque dolorem dolorum? Nostrum, 
+  nobis. Perferendis officia temporibus quia ducimus magnam omnis praesentium ratione, illo vitae.</p>
+  </div>
+
+<div style="background-color: yellow; color: black;">
+    <div class="box0">Section 2.0</div>
+  
+    <p>Lorem ipsum dolor sit amet consectetur, 
+    adipisicing elit. Voluptatibus eum dolor unde quidem quo atque dolorem dolorum? Nostrum, 
+    nobis. Perferendis officia temporibus quia ducimus magnam omnis praesentium ratione, illo vitae.</p>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur, 
+    adipisicing elit. Voluptatibus eum dolor unde quidem quo atque dolorem dolorum? Nostrum, 
+    nobis. Perferendis officia temporibus quia ducimus magnam omnis praesentium ratione, illo vitae.</p>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur, 
+    adipisicing elit. Voluptatibus eum dolor unde quidem quo atque dolorem dolorum? Nostrum, 
+    nobis. Perferendis officia temporibus quia ducimus magnam omnis praesentium ratione, illo vitae.</p>
+    </div>
+<div id="parent2">
+    <div class="box6"></div>
+    <div class="box6"></div>
+    <div class="box6 dont"></div>
+    <div class="box6">Select</div>
+    <div class="box6"></div>
+    <div class="box6"></div>
+  </div>
+
+<div class="box7"></div>
+    <hr>
+    Lorem ipsum dolor sit amet consectetur adipisicing <a href="">elit</a>. Nesciunt voluptate itaque obcaecati porro, tempora exercitationem numquam repellendus sequi, quisquam aperiam ut consectetur illum! Fugit cumque optio doloribus placeat corporis voluptate!
+ 
+<br><hr><br>
+
+<p>
+  Superman is alive!
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam itaque aspernatur sequi voluptatibus rem eos magni nisi voluptatum natus delectus sit amet quidem adipisci magnam minima, quibusdam quam eligendi numquam?
+  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur illo harum omnis, libero assumenda magni recusandae voluptatem qui culpa minus quibusdam facilis sequi laborum odio consequuntur perspiciatis mollitia ipsum impedit?
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti nisi neque iste perferendis fugiat nobis voluptatibus nostrum assumenda quod. Distinctio autem labore deserunt saepe nisi libero tempore sapiente culpa voluptates!
+</p>
+
+<a href="" class="button">Click</a>
+<br><hr><br>
+
+<div class="gradient"></div>
+</body>-->
+<br><hr><br>
+
+<div class="box9">Hi, form the other side of the window.</div>
+
+<div>
+
+</div>
+
+<script>
+
+
+</script>
+
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 201.2</title>
+</head>
+
+<style>
+
+*{box-sizing: border-box;}
+#container{display: flex; flex-wrap: wrap;} /*CONTAINER MUST BE NAMED CONTAINER, you need flex-wrap to for wtap effect...*/
+#container div{border: 1px solid red;}
+.nav{flex-basis: 20%; 
+flex-shrink: 0; 
+flex-grow: 1;
+}
+.content{flex-basis: 80%; 
+flex-shrink: 1;
+flex-grow: 0;}
+
+.header{flex-basis: 100%;
+flex-grow: 1; flex-shrink: 0;
+background-color: gold; color: white;
+border-bottom: 2px solid black;
+}
+
+#grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 2px dashed black;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    padding: 5px;
+}
+
+.item{
+   border: 1px solid red; 
+}
+
+.item1, .item7{grid-column-start: 1; grid-column-end: 4; /*Here to make item take space*/}
+.item2{grid-row-start: 2; grid-row-end: 4; /*Here to make item take space*/}
+.item4{}
+
+</style>
+
+<body>
+    
+
+    <div id="container">
+        <div class="header">Header</div>
+        <div class="nav">Navigation</div>
+        <div class="content"><h1>THis is the HEAD</h1>    
+            Content here
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id aspernatur, error inventore minima voluptatum quam tenetur debitis nemo aliquid, autem atque nulla libero! Aperiam, laboriosam explicabo esse deserunt deleniti laborum!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero fuga accusantium facilis, amet at voluptate enim porro reiciendis eos sed earum veritatis nobis ratione animi officia? Esse, natus. Dolor, sapiente?</p>
+        </div>
+    </div>
+
+<br><hr><br>
+
+<div id="grid">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item">3</div>
+    <div class="item">4</div>
+    <div class="item">5</div>
+    <div class="item">6</div>
+    <div class="item item7">7</div>
+    
+</div>
+
+</body>
+</html>

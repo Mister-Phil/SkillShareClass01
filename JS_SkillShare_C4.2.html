@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+<h2>Welcome page</h2>
+
+<div>
+    <label>Theme1</label>
+    <input type="text" class="js-col" style="border: 5px solid black;"> 
+</div><br>
+<div>
+    <label>Theme2</label>
+    <input type="text" class="js-text" style="border: 5px dashed red;">
+</div><br>
+<div>
+    <label>Theme3</label>
+    <input type="text" class="js-bord" style="border: 5px solid rgb(7, 205, 255);">
+</div>
+</body>
+<script>
+
+var themeE = document.querySelector(".js-col")
+var themeD = document.querySelector(".js-text")
+var body = document.querySelector("body")
+var themeEd = document.querySelector(".js-col", ".js-text",".js-bord")
+//var themeEd = document.querySelector(".js-col", ".js-text",".js-bord")
+
+    themeE.addEventListener('keyup', function(event) {
+    
+    body.style.backgroundColor = event.target.value
+    }); 
+
+
+    themeD.addEventListener('keyup', function(event) {
+    
+    body.style.color = event.target.value    
+    }); 
+    
+   
+</script>
+
+</html>
+
+<!-- 
+    
+    
+**Here are the info about the previous classes:
+         
+
+
+        **This is the input used in the "body" of the HTML, it will serve for Courses 12 & 13.
+        <h1>May I have your name?</h1>
+        <h3 id="customInput">_______</h3>
+
+        //Course 12: How to display the info asked in HTML...
+        var name = prompt("Your name?", "Please put your name here.")
+        var info = document.getElementById("customInput")
+        info.innerText = name
+
+
+        //Course 13: Your first successful 'if else Statement' in JS!
+        var name = prompt("Your name please?")
+        var infos = document.getElementById("welcome")
+
+        if(name == "M. Pyram") {
+        infos.innerText = "Welcome back " + name;} 
+        else {alert("Please try again...");}
+
+        
+        //Course 15: Miniproject 2  
+        > For Course 15: Miniproject 2  
+        <h1>Please provide web URL</h1>
+        <h3 id="welcome">_______</h3>
+
+        var name = prompt("Please provide the URL")
+        var infos = document.getElementById("welcome")
+
+        if(name.substr(0,5) == "https") {
+        infos.innerText = "Your website is... " + "<a href='" + name + "'>" + name + "</a>";} 
+        else {alert("SORRY try again...");}
+
+        //Course 24: Mini-Project 3.0
+        > The HTML for Course 24: Miniproject 3   
+        <h1>This is Malibu Club</h1>
+        <h3 id="welcome">_______</h3>
+        **This is the input used in the "body" of the HTML,
+        it will serve for Courses 26 & 25.
+
+        var age = prompt("What is your age?")
+        var infos = document.getElementById("welcome")
+
+        age = Number(age)
+
+        if(age >= 21) {
+        infos.innerText = "Welcome to Malibu Club";} 
+        else {alert("WE ARE CALLING THE POLICE!!");}
+
+        
+        //Course 26: Number function
+        function math(Number) {
+        if(Number > 10) {return("Yes")}
+        else{return("No")}
+        }
+
+        var ranNum = math(8);
+        console.log(ranNum)
+
+        function tip(amount) {
+    
+        var amount = prompt("Please enter the amount")
+        amount = Number(amount)
+        var tipSug = (amount * 0.15)
+        return(alert("You should provide at least " + tipSug +"..."))}
+
+        tip()
+        
+        
+        //Course 28
+        <h1 class="drink">This is Malibu Club</h1>
+        <h3 id="welcome">_______</h3>
+
+        var wAD = document.querySelector(".drink")
+        var small = wAD.querySelector("small")
+        small.innerText = "I DRIVE MADAM! 333"
+
+        //Course 29
+        <p>This is the logging section</p>
+        <input type="text" style="padding: 10px;"
+        class="form-ctrl" placeholder="Write here"
+        value="Do you see me??">
+
+        var infos = document.querySelector(".form-ctrl")
+        console.log(infos.value)
+
+        //Course 29 and 30:
+
+        <h1>Welcome to Malibu Club</h1>
+        <h3>You are in the restaurant section</h3>
+
+        The put amont here please: <input type="text" placeholder="Example: 25" style="border-color: red; margin-left: 10px;" id="amount"> CAD$
+        <br>The suggested tip should be: <span id="tip">_______</span> CAD$
+
+        <br><button class="btn" type="button" onclick="clickMe()">Calculate Tip</button>
+
+        <br><br><div>
+
+        <input type="text" class="js-customName">
+
+
+        function clickMe() {
+        var amount = document.getElementById("amount").value
+        amount = Number(amount)
+        var tip = (amount * 0.15)
+        console.log(amount, tip)
+        return (document.getElementById("tip").innerText = tip) //Here return = optional
+        }
+     
+        clickMe()
+    
+        //course #30
+        var thankYou = function() {
+        return document.querySelector(".js-customName").value
+        }
+
+        // Course 36 : the calculator function
+        var btn = document.querySelector(".js-button")
+        var functX = 1 //Here you will see change...
+        btn.addEventListener('click', function(event) {
+        //var functX = 1 -> Here the function will ALWAYS reset (stay 1 forever...)
+        functX = (functX * 2); //Yes, ou need to use the SAME name to see the changes...
+        document.getElementById("functX").innerText = functX
+        console.log(functX)
+        })
+
+        //Course 37: A responsive 'addEventListener'(s) page
+
+        <H3>Please enter the amount you want</H3>
+        <br>Amount Here:<input type="text" id="amount">
+        <br><h4> You've enter <span id="showMe">___</span> $ CAD</h4>
+
+        var input = document.getElementById("amount")
+        var nume = document.getElementById("showMe")
+    
+        function show(event) {
+        nume.innerText = event.target.value
+        }
+        input.addEventListener('keyup', show) 
+
+-->

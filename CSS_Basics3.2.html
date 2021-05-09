@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"><!--Good for Emojis-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS 201.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--**Critical for a Responsive page.-->
+    <title>CSS 201 B</title>
 
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
 
-<!--
-    1. You can create gradients
-    2. You can ADD fonts in 3 steps: fonts.google > SELECT the fonts > paste the link ABOVE STYLE > paste CSS rules.
-    3. Transformations = for scale, move, rotate element.
-    4. Animations
+<!-- Notes go here:
+
 -->
 
 <style>
     body,html {height: 100%; margin: 0; padding: 0;}
-    body {background-image: linear-gradient(180deg, 
+    body {background-image: linear-gradient(180deg,  
     rgba(0,0,0,0.6) 0%, /*The firts rbga = for the TOP; "()" refer to a function (JS)*/
     rgba(0,0,0,0.8) 100%), /*No "," in the ()!*/
-    url("data:image/jpeg;base64,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");
-    
+    url("http://www.esa.int/var/esa/storage/images/esa_multimedia/images/2019/06/europe_s_rockets/19421217-6-eng-GB/Europe_s_rockets.jpg");
+    width: 100%; height: auto; 
+
     color: white; font-size: 10vw; text-align: center; /*All for the text.*/
     font-family: 'Orbitron', sans-serif; /*(1) go on fonts.google.com, (2) paste the code link ABOVE the stlye, (3) paste the CSS rules in style.*/
     }
@@ -37,31 +35,32 @@
             skew(20deg, 10deg); = for a 3D effect (applicable for X & Y axis).
 }
 
-.box9{border: 10px solid red;
-width: 11vw; height: 40vw;
-margin: 50px auto;
-position: absolute; top: 0; left: 0; /*Here we make sure it's movable via a position setting of the starting point*/
-animation-name: slideMe; /*The name is case sensitive*/
-animation-duration: 5s;
-animation-iteration-count: infinite; /*For the loop*/
-animation-direction: alternate; 
-}
-
+    .box9{border: 10px solid red;
+    width: 11vw; height: 40vw;
+    margin: 50px auto;
+    position: absolute; top: 0; left: 0; /*Here we make sure it's movable via a position setting of the starting point*/
+    animation-name: slideMe; /*The name is case sensitive*/
+    animation-duration: 5s;
+    animation-iteration-count: infinite; /*For the loop*/
+    animation-direction: alternate;
+     
+    }
+    
 @keyframes slideMe{ /*How to call animaitons*/
     from{top: 0; left: 0;} /*(here we apply once again the starting point.*/
     to{width: 100%;}
 }
 
-.box10{border: 10px solid white;
+    .box10{border: 10px solid white;
 width: 300px; height: 300px;
 margin: 50px auto;
 position: absolute; top: 5; left: 0; /*Here we make sure it's movable via a position setting of the starting point*/
 animation-name: slideMe2; /*The name is case sensitive*/
 animation-duration: 7s;
 animation-iteration-count: infinite; /*For the loop*/
-}
+    }
 
-/*@keyframes slideMe2{ = to try!
+/*@keyframes slideMe2{ = To have something in motion all over the website.
     0%{top: 5; left: 0;}
     25%{top: 0; left: 0;}
     50%{top:5; right: 0;}
@@ -78,7 +77,10 @@ flex-grow: 0;
 }
 #container div.right{flex-basis: ;}
 
-
+/*The CSS 301 course start here*/
+/*@media (max-width: 640px) {      **Here it will change the color (or wtr else request) once arrived to a certain width. 
+    body{background-color: violet;}
+    }*/
 
 
 </style>
@@ -89,17 +91,20 @@ flex-grow: 0;
    <p>This is a rocket! <br> Welcome to the future!</p>
     <br><hr><br>
 
-   <div class="box8">Hi, from the other side of the window.</div>
+   <div class="box8">Hi, from the other side of the window.</div> <!--Okay the 2nd part of the page.-->
    <br><hr><br>
 
-   <div class="box9"></div>
+   <div class="box9"></div> <!--This is the dynamic box: body here, but box above.-->
    <br><hr><br>
 
-   <div id="container">
-       <div class="left">Left</div>
-       <div class="middle">Middle</div>
-       <div class="right">Right</div>
+   <div id="container"> <!--The last part of the page-->
+       <div class="left">Welome</div>
+       <div class="middle1">in</div>
+       <div class="midde2">our</div>
+       <div class="right">World</div>
    </div>
+
+<a href=""></a>
 
 </body>
 </html>

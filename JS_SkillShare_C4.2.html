@@ -7,43 +7,50 @@
     <title>Document</title>
 </head>
 
-<body>
+<style>
+/*Pour le projet modal*/
+modal { 
+position: fixed;
+top: 50%; left: 50%;
+border: 1px solid rgb(0, 0, 0); border-radius: 0%;
+background-color: rgb(0, 238, 255);
+box-shadow: 5px 5px rgb(253, 123, 1);
+width: 50%; padding: 20px;
+max-width: 8000px;
+transform: translate(-50%, -50%);
+display: none;
+}
 
-<h2>Welcome page</h2>
+.title{
+font-family: fantasy;
+font-size: 30px;
+margin: 20%;
 
-<div>
-    <label>Theme1</label>
-    <input type="text" class="js-col" style="border: 5px solid black;"> 
-</div><br>
-<div>
-    <label>Theme2</label>
-    <input type="text" class="js-text" style="border: 5px dashed red;">
-</div><br>
-<div>
-    <label>Theme3</label>
-    <input type="text" class="js-bord" style="border: 5px solid rgb(7, 205, 255);">
-</div>
+/*We add the fact that all changes will be smoother...*/
+transition: transform 2.75s;
+}
+
+.title:hover{
+transform: rotate(50deg) scale(1.25);
+color: rgb(51, 240, 3);
+}
+
+</style>
+
+
+<H2 id="funnyT" class="title">
+        <span class="illo">The Final Project</span></H2>
+
+
 </body>
 <script>
 
-var themeE = document.querySelector(".js-col")
-var themeD = document.querySelector(".js-text")
-var body = document.querySelector("body")
-var themeEd = document.querySelector(".js-col", ".js-text",".js-bord")
-//var themeEd = document.querySelector(".js-col", ".js-text",".js-bord")
-
-    themeE.addEventListener('keyup', function(event) {
-    
-    body.style.backgroundColor = event.target.value
-    }); 
+var fun = document.getElementById("funnyT")
+fun.innerText = fun.split('')
+var word = document.querySelectorAll(".illo")
 
 
-    themeD.addEventListener('keyup', function(event) {
-    
-    body.style.color = event.target.value    
-    }); 
-    
-   
+
 </script>
 
 </html>
@@ -179,7 +186,7 @@ var themeEd = document.querySelector(".js-col", ".js-text",".js-bord")
         console.log(functX)
         })
 
-        //Course 37: A responsive 'addEventListener'(s) page
+        //Course 37: A responsive 'addEventListener(s)' page
 
         <H3>Please enter the amount you want</H3>
         <br>Amount Here:<input type="text" id="amount">
@@ -192,5 +199,99 @@ var themeEd = document.querySelector(".js-col", ".js-text",".js-bord")
         nume.innerText = event.target.value
         }
         input.addEventListener('keyup', show) 
+
+        //Mini-Project5:
+
+        <h2>Welcome page</h2>
+
+        <div>
+        <label>Theme1</label>
+        <input type="text" class="js-col" style="border: 5px solid black;"> 
+        </div>
+        <br>
+        <div>
+        <label>Theme2</label>
+        <input type="text" class="js-text" style="border: 5px dashed red;">
+        </div><br>
+        <div>
+        <label>Theme3</label>
+        <input type="text" class="js-bord" style="border: 5px solid rgb(7, 205, 255);">
+        </div>
+
+        var themeE = document.querySelector(".js-col")
+        var themeD = document.querySelector(".js-text")
+        var body = document.querySelector("body")
+        var themeF = document.querySelector(".js-bord")
+        //var themeEd = document.getElementById(".js-col", ".js-text",".js-bord")
+
+        themeE.addEventListener('keyup', function(event) {
+    
+        body.style.backgroundColor = event.target.value
+        }); 
+
+
+        themeD.addEventListener('keyup', function(event) {
+    
+        body.style.color = event.target.value   
+        }); 
+    
+        themeF.addEventListener('keyup', function(event) {
+    
+        body.style.fontSize = event.target.value + 'px' 
+        //Here you need to add 'px' at the end, else = non-funcional    
+        }); 
+
+
+        //Course: 47
+        <p>You choose: <span id="ans">____</span></p>
+
+        var what = prompt("What article you want?")
+        var read = ["Article 1", "Article 2", "Article 3", "Article 4", "Article 5"]
+        var response = document.getElementById("ans") //Must be said as a VAR
+
+        read.forEach(function(name, index) {
+        if(what == read[1]) {response.innerText = "Well done! It was " + what}
+        else{alert("Sorry!")}
+        console.log(index, name)        
+})
+        //Course48:Modal - small EXP =
+
+        <body>
+        <div class="modal"> 
+        <h2>Welome back!</h2>
+        <p>Glad to see you <span id="name">____</span></p>
+        <p>The Date & Time is: <span id="time">___</span></p>
+
+        <button id="boxyC">Close me :(</button>
+        </div>
+
+        <button id="boxyM">MODAL opening</button>
+
+        const openBtn = document.getElementById("boxyM") // For the button
+        const closeBtn = document.getElementById("boxyC")
+        const modal = document.querySelector(".modal") //To select the modal
+            
+        openBtn.addEventListener('click', function(event){
+        modal.style.display = 'initial' //Initial = wtr it is BEFORE 'display:none'
+
+        //To display the name in the Modal
+        var hello = prompt("May I have you name, please?")
+        var whoYou = document.getElementById("name")
+        whoYou.innerText = hello
+
+        //To show the time in the modal 
+        var timeShow = new Date();
+        document.getElementById("time").innerHTML = timeShow;
+        //**Here no need to mention the innerText...
+
+        })//End of the code Open the Modal
+
+        //To close the Modal
+        closeBtn.addEventListener('click', function(event){
+        modal.style.display = 'none' //None = Hide it
+        })
+
+
+
 
 -->

@@ -35,7 +35,7 @@ app.get('/api/course', (req, res) => {
 app.get('/api/courses', (req, res) => {
     res.send(courses);
 });
-//Just for fun - All the Heroes
+//Just for fun - All the Heroes | You need to call the URL with "heroes" in it...
 app.get('/api/heroes', (req, res) => {
     res.send(heroes);
 });
@@ -93,3 +93,4 @@ app.delete('/api/courses/:id', (req, res) => {
 const port = process.env.PORT || 3000; 
 app.listen(port, () => console.log('Listening on...' + port)); 
 //You dont NEED to use "${port}!!!"
+

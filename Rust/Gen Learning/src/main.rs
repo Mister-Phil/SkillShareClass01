@@ -1,7 +1,7 @@
-mod strings; //Here, we are calling the file named 'yellow'.
+mod tuples; //Here, we are calling the file named 'yellow'.
 
 fn main() {
 
-    strings::run(); //Here we are CALLING THE FILE + THE FUNCTION!!
+    tuples::run(); //Here we are CALLING THE FILE + THE FUNCTION!!
     
 }

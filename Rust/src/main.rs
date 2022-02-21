@@ -1,6 +1,20 @@
 // My keys = [], {}
+use std::io;
 fn main() {
  
+println!("Enter value"); 
+let mut input=String::new();
+io::stdin().read_line(&mut input).expect("error, plz correct");
+// let mut input:i32=input.trim().parse().expect("Please, enter a number"); || This is for CONVERTING THE STRING IN A #/number. 
+
+
+println!("The value entered by the user is: {}",input);
+
+
+}
+
+/*
+
 let a=10;
 let b:u32=15;
 let c:f32=5.34;
@@ -16,4 +30,5 @@ println!("value of a variable:{}",d);
 println!("Value of the boolean:{}",e);
 println!("The value is the letter:{}",f);
 println!("Your string is:{}",g);
-}
+
+*/

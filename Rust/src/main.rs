@@ -13,7 +13,6 @@ println!("The value entered by the user is: {}",input);
 
 }
 
-/*
 
 let a=10;
 let b:u32=15;
@@ -30,5 +29,3 @@ println!("value of a variable:{}",d);
 println!("Value of the boolean:{}",e);
 println!("The value is the letter:{}",f);
 println!("Your string is:{}",g);
-
-*/

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+
+
+<!--
+    Notes go here.
+-->
+
+<style>
+
+
+.abf-frame p {
+	font-family: Helvetica!important;
+	line-height: 18px;
+	margin: 0!important;
+	padding: 0!important
+}
+.abf-frame {
+	color: #000!important;
+	background-color: #fff!important;
+	position: absolute;
+	top: calc(50% - 245px);
+	left: calc(50% - 180px);
+	font-family: Helvetica!important;
+	width: 360px;
+	max-height: 600px;
+	margin-top: 0;
+	text-align: left;
+	box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+	border-radius: 3px;
+	font-size: 12px
+}
+.abf-frame a {
+	font-family: Helvetica!important;
+	color: #6A8FC2!important
+}
+.abf-frame a:hover {
+	color: #676573!important
+}
+.abf-form {
+	padding: 0 24px 24px
+}
+.abf-header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 24px;
+	min-height: 93px
+}
+.abf-header div:nth-child(1) img {
+	display: inline-block;
+	margin: 5px 0
+}
+.abf-ash1 {
+	text-align: center;
+	font-size: 14px;
+	margin: 12px 0
+}
+.abf-ash2 {
+	font-size: 14px;
+	text-align: center;
+	margin: 12px 0;
+	font-weight: 700
+}
+.abf-topline {
+	border-top: 1px solid #dedede!important;
+	padding-top: 12px
+}
+.abf-list-item {
+	padding: 4px 0;
+	display: flex;
+	align-items: baseline
+}
+.abf-label {
+	display: inline-block;
+	width: 45%;
+	padding-right: 24px;
+	box-sizing: border-box;
+	vertical-align: top;
+	font-size: 12px;
+	opacity: .5;
+	text-align: right
+}
+.abf-value {
+	display: inline-block;
+	width: 48%;
+	box-sizing: border-box
+}
+.abf-confirmations {
+	display: inline-block;
+	background-color: #f1c70c!important;
+	width: 12px;
+	height: 12px;
+	font-size: 9px;
+	line-height: 12px;
+	text-align: center;
+	color: #fff!important;
+	border-radius: 50%;
+	margin-left: 3px
+}
+.abf-green {
+	background-color: #28a745!important
+}
+.abf-img-height {
+	max-height: 80px
+}
+
+</style>
+
+
+</head>
+<!-- End OF CSS HERE-->
+<div class="abf-frame">
+    <div class="abf-header">
+      <div>
+        <div class="abf-ash1"><img src="https://apirone.com/static/promo/bitcoin_logo_vector.svg" width="95" alt=""></div>
+      </div>
+      <div style="text-align: center; background-color:#83bbd1;"><span class="abf-qr"> <img class="abf-img-height" src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=bitcoin%3MeSHt5CCBMoq14BNYjfCfp81ugFVjwZeC%3Famount%3D0.04656914&choe=UTF-8" style="display: inline;" alt="QR code for payment"> </span> </div>
+    </div>
+    <div class="abf-form">
+      <div class="abf-ash1"> Please send <strong><span class="abf-totalbtc">65</span></strong> DAI / USDC
+        to address: </div>
+      <div class="abf-address abf-topline abf-ash2 abf-input-address">cyberhot.crypto</div>
+      <div class="abf-data abf-topline">
+        <div class="abf-list">
+          <div class="abf-list-item">
+            <div class="abf-label">Merchant:</div>
+            <div class="abf-value">Vixen Black</div>
+          </div>
+          <div class="abf-list-item">
+            <div class="abf-label">Amount to pay:</div>
+            <div class="abf-value"><span class="abf-totalbtc">0.04656914</span> BTC</div>
+          </div>
+          <div class="abf-list-item">
+            <div class="abf-label">Arrived amount:</div>
+            <div class="abf-value"><span class="abf-arrived">0.00001000</span> BTC</div>
+          </div>
+          <div class="abf-list-item">
+            <div class="abf-label">Remains to pay:</div>
+            <div class="abf-value"><b><span class="abf-remains">0.04655914</span> BTC</b></div>
+          </div>
+          <div class="abf-list-item">
+            <div class="abf-label">Date:</div>
+            <div class="abf-value">2018-09-25</div>
+          </div>
+          <div class="abf-list-item abf-tx-block">
+            <div class="abf-label">Transaction(s):</div>
+            <div class="abf-value abf-tx">
+              <div><a href="https://apirone.com/btc/tx/7915799c224327bc9a89cc44e8a98e09aca3ace17bd1f6f5a8423c69b6511b84" target="_blank">7915799c22...b6511b84</a>
+                <div class="abf-confirmations abf-green" title="Confirmations count">1</div>
+              </div>
+            </div>
+          </div>
+          <div class="abf-list-item">
+            <div class="abf-label">Status:</div>
+            <div class="abf-value"><b><span class="abf-status">Waiting payment</span></b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+-----------------------------------------------------
+PAGE 2 CODE:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+<style> 
+#example1 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #f1c70c;
+}
+
+#example2 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #83bbd1;
+}
+
+</style>
+</head>
+<body>
+
+<center><h1>Checkout Page</h1></center>
+<p>Please select your payment option:</p>
+
+<div><center><h3>Crypto Payment:</h3>
+<img src= "https://static.thenounproject.com/png/3262833-200.png" width="50" heigth="50" </center>
+<div id="example1"> 
+  <center><p>Please send <b>70$ worth of crypto</b> to the address below.
+  <br>*Cryptocurrencies accpted are: DAI, USDC (ERC20), SOL, BTC, ETH, LTC and MATIC (Polygon + ERC20). 
+  <br><br><b>Address = cyberhot.crypto</b></p></center>
+</div>
+
+
+<center><h3>PayPal Option:</h3><img src= "https://cdn-icons-png.flaticon.com/512/174/174861.png" width="50" heigth="50";</center>
+<div id="example2"> 
+
+<center><p>Please use this link: <a href="paypal.me/medusanblack">Here</a></p></center>
+</div>
+
+</body>
+</html>
+  
+
+
+-----------------------------------------------------
+TAPLINK VERSION:
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+<style> 
+#example1 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #f1c70c;
+}
+
+#example2 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #83bbd1;
+}
+
+</style>
+</head>
+<body>
+
+<center><h1>Checkout Page</h1></center>
+<p>Please select your payment option:</p>
+
+<center><h3>Crypto Payment:</h3></center>
+<div> 
+  <center><p>Please send <b>70$ worth of crypto</b> to the address below.
+  <br>*Cryptocurrencies accpted are: DAI, USDC (ERC20), SOL, BTC, ETH, LTC and MATIC (Polygon + ERC20). <br><br><b>Address = cyberhot.crypto</b></p></center>
+</div>
+
+
+<center><h3>PayPal Option:</h3></center>
+<div> <center><p>Please use this link: <a href="paypal.me/medusanblack">Here</a></p></center>
+</div>
+
+</body>
+</html>

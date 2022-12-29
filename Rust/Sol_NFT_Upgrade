@@ -1,0 +1,38 @@
+use solana_sdk::{
+    account::Account,
+    account_utils::StateMut,
+    bpf_loader,
+    clock::Slot,
+    program_utils::{current_account, next_account_mut, next_keyed_account_mut},
+    pubkey::Pubkey,
+    system_program,
+};
+use std::convert::TryInto;
+
+#[derive(Clone, Debug, Serialize, Deserialize)]
+struct UpgradableNFT {
+    // The current version of the NFT
+    version: u8,
+    // The data stored in the NFT
+    data: Vec<u8>,
+}
+
+impl UpgradableNFT {
+    fn new(data: Vec<u8>) -> Self {
+        UpgradableNFT {
+            version: 1,
+            data,
+        }
+    }
+
+    fn upgrade(&mut self) {
+        self.version += 1;
+    }
+}
+
+fn process_instruction(
+    program_id: &Pubkey,
+    accounts: &[Account],
+    instruction_data: &[u8],
+) -> Result<(), String> {
+    let account_info = current

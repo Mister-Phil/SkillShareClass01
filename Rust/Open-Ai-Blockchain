@@ -1,0 +1,67 @@
+use std::time::SystemTime;
+
+// Define the structure for a single block in the blockchain
+#[derive(Debug, Clone)]
+struct Block {
+    index: u64,
+    timestamp: SystemTime,
+    data: Vec<u8>,
+    previous_hash: String,
+    hash: String,
+}
+
+// Define the structure for the blockchain
+#[derive(Debug, Clone)]
+struct Blockchain {
+    chain: Vec<Block>,
+}
+
+// Implement the Blockchain structure
+impl Blockchain {
+    fn new() -> Self {
+        let mut blockchain = Blockchain { chain: Vec::new() };
+        blockchain.add_block(Block {
+            index: 0,
+            timestamp: SystemTime::now(),
+            data: Vec::new(),
+            previous_hash: String::new(),
+            hash: String::new(),
+        });
+        blockchain
+    }
+
+    fn add_block(&mut self, block: Block) {
+        let last_block = self.chain.last().unwrap();
+        block.previous_hash = last_block.hash.clone();
+        block.hash = calculate_hash(&block);
+        self.chain.push(block);
+    }
+}
+
+// Function to calculate the hash of a block
+fn calculate_hash(block: &Block) -> String {
+    // TODO: Implement a hash function here (e.g. SHA-256)
+    String::new()
+}
+
+fn main() {
+    let mut blockchain = Blockchain::new();
+
+    // Add some blocks to the blockchain
+    blockchain.add_block(Block {
+        index: 1,
+        timestamp: SystemTime::now(),
+        data: vec![1, 2, 3],
+        previous_hash: String::new(),
+        hash: String::new(),
+    });
+    blockchain.add_block(Block {
+        index: 2,
+        timestamp: SystemTime::now(),
+        data: vec![4, 5, 6],
+        previous_hash: String::new(),
+        hash: String::new(),
+    });
+
+    println!("Blockchain: {:?}", blockchain);
+}
